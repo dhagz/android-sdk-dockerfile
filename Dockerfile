@@ -22,7 +22,8 @@ RUN wget --quiet --output-document=/tmp/sdk-tools-linux.zip $ANDROID_SDK_URL \
 
 # Download and Install Platform SDK
 RUN echo y | $ANDROID_HOME/tools/bin/sdkmanager "platforms;android-$ANDROID_COMPILE_SDK_VERSION"
-RUN echo y | $ANDROID_HOME/tools/bin/sdkmanager "build-toos;android-$ANDROID_BUILD_TOOLS_VERSION"
+RUN echo y | $ANDROID_HOME/tools/bin/sdkmanager "build-tools;android-$ANDROID_BUILD_TOOLS_VERSION"
+RUN echo y | $ANDROID_HOME/tools/bin/sdkmanager "platform-tools"
 
 # Download and Install Gradle
 RUN wget --quiet --output-document=/tmp/gradle.zip $GRADLE_URL \
