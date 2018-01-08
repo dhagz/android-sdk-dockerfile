@@ -4,16 +4,25 @@ Update the following part of code to download specific Android SDK and/or Gradle
 
 Docker Hub Link: https://hub.docker.com/r/fdhagz/android-sdk/
 
+## Environment Variables
+
 ```
-# Environment Variables
 ENV ANDROID_HOME="/android/sdk" \
     ANDROID_SDK_URL="https://dl.google.com/android/repository/sdk-tools-linux-3859397.zip" \
-	ANDROID_COMPILE_SDK_VERSION="26" \
-	ANDROID_BUILD_TOOLS_VERSION="26.0.2" \
-	GRADLE_URL="https://services.gradle.org/distributions/gradle-4.1-all.zip" \
-	GRADLE_HOME="/android/gradle-4.1" \
-	USER_HOME="/android"
+    ANDROID_COMPILE_SDK_VERSION="26" \
+    ANDROID_BUILD_TOOLS_VERSION="26.0.2" \
+    GRADLE_URL="https://services.gradle.org/distributions/gradle-4.1-all.zip" \
+    GRADLE_HOME="/android/gradle-4.1" \
+    USER_HOME="/android"
 ```
+
+- `ANDROID_SDK_URL`
+-- You can find this at the Linux platform here: https://developer.android.com/studio/index.html#command-tools
+- `GRADLE_URL`
+-- Open `gradle-wrapper.properties` in you project and look up to the value of `distributionUrl`.
+- `GRADLE_HOME`
+-- When you try to download the file from `GRADLE_URL` inside is a folder. The folder name comes after the `/android`.
+
 
 ## Sample .gitlab-ci.yml
 
