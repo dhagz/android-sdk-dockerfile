@@ -8,6 +8,9 @@ ENV ANDROID_HOME="/android/sdk" \
 	ANDROID_COMPILE_SDK_VERSION="26" \
 	GRADLE_URL="https://services.gradle.org/distributions/gradle-4.1-all.zip" \
 	GRADLE_HOME="/android/gradle"
+	
+# Work directory
+WORKDIR /android
 
 # Download and Install Android SDK
 RUN wget --quiet --output-document=/tmp/sdk-tools-linux.zip $ANDROID_SDK_URL \
