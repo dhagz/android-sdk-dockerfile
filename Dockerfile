@@ -5,11 +5,11 @@ MAINTAINER Dhagz <dhagz@walng.com>
 # Environment Variables
 ENV ANDROID_HOME="/android/sdk" \
     ANDROID_SDK_URL="https://dl.google.com/android/repository/sdk-tools-linux-3859397.zip" \
-	ANDROID_COMPILE_SDK_VERSION="26" \
-	ANDROID_BUILD_TOOLS_VERSION="26.0.2" \
-	GRADLE_URL="https://services.gradle.org/distributions/gradle-4.1-all.zip" \
-	GRADLE_HOME="/android/gradle-4.1" \
-	USER_HOME="/android"
+    ANDROID_COMPILE_SDK_VERSION="26" \
+    ANDROID_BUILD_TOOLS_VERSION="26.0.2" \
+    GRADLE_URL="https://services.gradle.org/distributions/gradle-4.1-all.zip" \
+    GRADLE_HOME="/android/gradle-4.1" \
+    USER_HOME="/android"
 	
 # Work directory
 WORKDIR $USER_HOME
