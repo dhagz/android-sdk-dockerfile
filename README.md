@@ -17,14 +17,14 @@ ENV ANDROID_HOME="/android/sdk" \
 ```
 
 - `ANDROID_SDK_URL`
--- You can find this at the Linux platform here: https://developer.android.com/studio/index.html#command-tools
+  - You can find this at the Linux platform here: https://developer.android.com/studio/index.html#command-tools
 - `GRADLE_URL`
--- Open `gradle-wrapper.properties` in you project and look up to the value of `distributionUrl`.
+  - Open `gradle-wrapper.properties` in you project and look up to the value of `distributionUrl`.
 - `GRADLE_HOME`
--- When you try to download the file from `GRADLE_URL` inside is a folder. The folder name comes after the `/android`.
+  - When you download the file from `GRADLE_URL`, inside is a folder and the folder name  is the ones that come after the `/android`.
 
 
-## Sample .gitlab-ci.yml
+## Sample GitLab CI .gitlab-ci.yml
 
 ```
 image: fdhagz/android-sdk:v26
