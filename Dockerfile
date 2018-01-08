@@ -23,7 +23,7 @@ RUN echo y | $ANDROID_HOME/tools/bin/sdkmanager "platforms;android-$ANDROID_COMP
 
 # Download and Install Gradle
 RUN wget --quiet --output-document=/tmp/gradle.zip $GRADLE_URL \
- && unzip /tmp/gradle.zip -d "$GRADLE_HOME"
+ && unzip /tmp/gradle.zip -d "$GRADLE_HOME" \
  && rm /tmp/gradle.zip
 
 # Update PATH
