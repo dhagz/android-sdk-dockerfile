@@ -15,7 +15,7 @@ ENV ANDROID_HOME="/android/sdk" \
 	USER_HOME="/android"
 ```
 
-# .gitlab-ci.yml
+## Sample .gitlab-ci.yml
 
 ```
 image: fdhagz/android-sdk:v26
@@ -34,20 +34,35 @@ cache:
     - .gradle/caches
 
 stages:
+  - lint
   - build
   - test
+
+lint:
+  stage: lint
+  script:
+    - ./gradlew lint
+  artifacts:
+    expire_in: 6 mos
+    paths:
+    - app/build/reports
 
 build:
   stage: build
   script:
     - ./gradlew assembleDebug
   artifacts:
+    expire_in: 6 mos
     paths:
     - app/build/outputs
-    - app/build/reports
 
 test:
   stage: test
   script:
     - ./gradlew test
+  artifacts:
+    expire_in: 6 mos
+    when: on_failure
+    paths:
+    - app/build/reports
 ```
