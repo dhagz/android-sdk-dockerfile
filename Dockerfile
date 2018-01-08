@@ -6,6 +6,7 @@ MAINTAINER Dhagz <dhagz@walng.com>
 ENV ANDROID_HOME="/android/sdk" \
     ANDROID_SDK_URL="https://dl.google.com/android/repository/sdk-tools-linux-3859397.zip" \
 	ANDROID_COMPILE_SDK_VERSION="26" \
+	ANDROID_BUILD_TOOLS_VERSION="26.0.2" \
 	GRADLE_URL="https://services.gradle.org/distributions/gradle-4.1-all.zip" \
 	GRADLE_HOME="/android/gradle-4.1" \
 	USER_HOME="/android"
@@ -19,8 +20,9 @@ RUN wget --quiet --output-document=/tmp/sdk-tools-linux.zip $ANDROID_SDK_URL \
  && rm /tmp/sdk-tools-linux.zip \
  && yes | $ANDROID_HOME/tools/bin/sdkmanager --licenses
 
-# Install SDK
+# Download and Install Platform SDK
 RUN echo y | $ANDROID_HOME/tools/bin/sdkmanager "platforms;android-$ANDROID_COMPILE_SDK_VERSION"
+RUN echo y | $ANDROID_HOME/tools/bin/sdkmanager "build-toos;android-$ANDROID_BUILD_TOOLS_VERSION"
 
 # Download and Install Gradle
 RUN wget --quiet --output-document=/tmp/gradle.zip $GRADLE_URL \
