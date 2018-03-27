@@ -6,9 +6,9 @@ MAINTAINER Dhagz <dhagz@walng.com>
 ENV ANDROID_HOME="/android/sdk" \
     ANDROID_SDK_URL="https://dl.google.com/android/repository/sdk-tools-linux-3859397.zip" \
     ANDROID_COMPILE_SDK_VERSION="27" \
-    ANDROID_BUILD_TOOLS_VERSION="27.0.3" \
-    GRADLE_URL="https://services.gradle.org/distributions/gradle-4.1-all.zip" \
-    GRADLE_HOME="/android/gradle-4.1" \
+    ANDROID_BUILD_TOOLS_VERSION="27.1.0" \
+    GRADLE_URL="https://services.gradle.org/distributions/gradle-4.4-all.zip" \
+    GRADLE_HOME="/android/gradle-4.4" \
     USER_HOME="/android"
 	
 # Work directory
