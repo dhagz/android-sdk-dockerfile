@@ -10,7 +10,7 @@ Docker Hub Link: https://hub.docker.com/r/fdhagz/android-sdk/
 ENV ANDROID_HOME="/android/sdk" \
     ANDROID_SDK_URL="https://dl.google.com/android/repository/sdk-tools-linux-3859397.zip" \
     ANDROID_COMPILE_SDK_VERSION="27" \
-    ANDROID_BUILD_TOOLS_VERSION="27.1.0" \
+    ANDROID_BUILD_TOOLS_VERSION="27.0.3" \
     GRADLE_URL="https://services.gradle.org/distributions/gradle-4.4-all.zip" \
     GRADLE_HOME="/android/gradle-4.4" \
     USER_HOME="/android"
